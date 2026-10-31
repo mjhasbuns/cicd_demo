@@ -10,7 +10,7 @@ prompt = (
     "that returns the monthly payment. Return only the code, no explanation."
 )
 
-response = client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
+response = client.models.generate_content(model="gemini-3.8-flash", contents=prompt)
 code = response.text.replace("```python", "").replace("```", "").strip()
 
 with open("loan_payment.py", "w") as f:
